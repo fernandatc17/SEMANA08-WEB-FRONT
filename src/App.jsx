@@ -50,7 +50,7 @@ function App() {
           <Route
             path="/mod"
             element={
-              <ProtectedRoute requiredRoles={["ROLE_MODERATOR"]}>
+              <ProtectedRoute requiredRoles={["ROLE_MODERATOR", "ROLE_ADMIN"]}>
                 <ModPage />
               </ProtectedRoute>
             }
@@ -84,7 +84,7 @@ function App() {
           <Route
             path="/ordenes"
             element={
-              <ProtectedRoute requiredRoles={["ROLE_ADMIN", "ROLE_USER"]}>
+              <ProtectedRoute requiredRoles={["ROLE_MODERATOR", "ROLE_USER","ROLE_ADMIN"]}>
                 <Ordenes />
               </ProtectedRoute>
             }
@@ -93,7 +93,7 @@ function App() {
           <Route
             path="/detalles"
             element={
-              <ProtectedRoute requiredRoles={["ROLE_ADMIN", "ROLE_USER"]}>
+              <ProtectedRoute requiredRoles={["ROLE_MODERATOR", "ROLE_USER","ROLE_ADMIN"]}>
                 <Detalles />
               </ProtectedRoute>
             }
